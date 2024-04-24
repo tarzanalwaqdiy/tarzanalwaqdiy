@@ -1,0 +1,31 @@
+TAG: 2.12.2(22121091)
+ROOT: false
+ABI: armeabi-v7a
+MODEL: itel A662LM
+SDK: 31
+RELEASE: 12
+---StackTrace---
+java.lang.SecurityException: Permission Denial: opening provider androidx.core.content.FileProvider from ProcessRecord{6961706 10479:bin.mt.plus/u0a504} (pid=10479, uid=10504) that is not exported from UID 10483
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:2426)
+	at android.os.Parcel.createException(Parcel.java:2410)
+	at android.os.Parcel.readException(Parcel.java:2393)
+	at android.os.Parcel.readException(Parcel.java:2335)
+	at android.app.IActivityManager$Stub$Proxy.getContentProvider(IActivityManager.java:6440)
+	at android.app.ActivityThread.acquireProvider(ActivityThread.java:7109)
+	at android.app.ContextImpl$ApplicationContentResolver.acquireUnstableProvider(ContextImpl.java:3483)
+	at android.content.ContentResolver.acquireUnstableProvider(ContentResolver.java:2528)
+	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1846)
+	at android.content.ContentResolver.openOutputStream(ContentResolver.java:1564)
+	at l.ۛۖۤ.۫(W14W:173)
+	at l.۟ۖۦ.ۡ(UAU2:296)
+	at l.ۤۖۤ.ۡ(L131:22)
+	at l.ۦۧۤ.ۡ(D181:625)
+	at l.ۜۖۦ.ۡ(WB34:119)
+	at l.۫ۧۦ.ۡ(3B3L:1115)
+	at l.۫ۧۦ.ۡ(3B3L:1081)
+	at l.ۡۧۦ.۬(ZB2P:1026)
+	at l.ۙ۟ۥ.ۡ(N4WI:75)
+	at l.ۘ۟ۥ.run(5ATD:185)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.lang.Thread.run(Thread.java:920)
